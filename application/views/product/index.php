@@ -18,6 +18,8 @@
             <td>Name</td>
             <td>Description</td>
             <td>Price</td>
+            <td>Photo</td>
+            <td>Action</td>
         </tr>
         <?php
         foreach ($products->result() as $product) {
@@ -26,6 +28,7 @@
                 <td><?php echo $product->name; ?></td>
                 <td><?php echo $product->description; ?></td>
                 <td><?php echo $product->price; ?></td>
+                <td><img src="<?php echo base_url('documents/' . $product->photo); ?>" height="100"></td>
                 <td>
                     <a href="<?php echo base_url('product/delete/' . $product->id) ?>">DELETE</a>
                     <a href="<?php echo base_url('product/edit/' . $product->id) ?>">EDIT</a>
